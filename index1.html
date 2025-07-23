@@ -97,6 +97,35 @@
       text-align: center;
     }
   </style>
+  <style>
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    faders.forEach(el => observer.observe(el));
+  });
+</script>
+
 </head>
 <body>
   <header>
@@ -113,7 +142,7 @@
   <div class="hero">
     <h1>創造工学部｜情報コース</h1>
   </div>
-  <section class="section" id="学べること">
+  <section class="section fade-in" id="学べること">
     <h2>学べること</h2>
  ◆ 情報システムは電気・水道と同様に世の中に欠かせないインフラであり、同時に「不正アクセスや情報漏えい」などのリスク要素でもあります。大胆な構想力や緻密な設計力を培い、次世代の情報システム・セキュリティ技術者を育成します。<br>
         ◆ 主な科目<br>
@@ -130,13 +159,13 @@
             　・情報システムの安全を守るセキュリティ技術者 etc...</li>  </section>
 
 
-  <section class="section" id="学べること">
+  <section class="section fade-in" id="学べること">
     <h2>学べること</h2>
         <li>セキュリティ</li>
         <li>人工知能</li>
         <li>データ分析</li>  </section>
 
-  <section class="section" id="先生">
+  <section class="section fade-in" id="先生">
     <h2><a href="sensei.html">先生</a><h2>
      <table>
       <tr>
@@ -166,7 +195,7 @@
     </table>
   </section>
   
-  <section class="section" id="教育理念">
+  <section class="section fade-in" id="教育理念">
     <h2>教育理念</h2>
     ◆情報技術や人工知能の進化により、個人の生活から産業のあり方まで、社会全体が大きく変わろうとしている。このような社会ニーズに応えるため、本コースでは、「人工知能」はもちろん、コンピュータの基本的構成やデータ構造とアルゴリズムなどの「情報学基礎」、グローバルなネットワークによるクラウドやビッグデータに対応した「情報基盤構築技術」、高い信頼性や安全性を確保する「セキュリティ技術」、利用者の立場で情報システムを設計・開発できる「情報システム設計・開発技術」に加えて、実社会が抱える課題を正しく理解し、当該分野のみならず他分野を専門にする者と一緒にそれらを解決できる次世代の情報技術者を養成する。
   </section>
