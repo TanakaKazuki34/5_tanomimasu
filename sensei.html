@@ -52,6 +52,81 @@
 }
 
   </style>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #749fe3;
+    }
+    header {
+      color: rgb(0, 0, 0);
+      padding: 1rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      display: inline-block;
+      position: relative;
+    }
+    header h1::before,
+    header h1::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      height: 2px;
+      background: rgb(0, 0, 0);
+    }
+    header h1::before {
+      right: 100%;
+      margin-right: 15px;
+    }
+    header h1::after {
+      left: 100%;
+      margin-left: 15px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      background: #444;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0 10px;
+    }
+    nav a:not(:last-child) {
+      border-right: 1px solid white;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://www.omazaki.co.id/system/uploads/2019/06/Engineering-1024x480.jpg') no-repeat center center/cover;
+      height: 400px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
 
